@@ -1,0 +1,136 @@
+.home {
+    section {
+    }
+    .sec1 {
+        width: 100vw;
+        height: 80vh;
+        overflow: hidden;
+        position: relative;
+        .slide {
+            width: 100%;
+            height: 100%;
+
+            .slide_item {
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+                transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s,
+                    height 0.75s;
+
+                //이미지 2개를 배경으로 미리 겹쳐 놓음
+                &:nth-child(1),
+                &:nth-child(2) {
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform: none;
+                    border-radius: 0;
+                    box-shadow: none;
+                    opacity: 1;
+                }
+                &:nth-child(3) {
+                    left: 50%;
+                }
+                &:nth-child(4) {
+                    left: calc(50% + 220px);
+                }
+                &:nth-child(5) {
+                    left: calc(50% + 440px);
+                }
+                &:nth-child(6) {
+                    left: calc(50% + 660px);
+                }
+                &:nth-child(7) {
+                    left: calc(50% + 880px);
+                    opacity: 0;
+                }
+                &:nth-child(8) {
+                    left: calc(50% + 1100px);
+                    opacity: 0;
+                }
+                //캡션 애니메이션 적용
+                &:nth-child(2) figcaption {
+                    visibility: visible;
+                    animation: show 0.75s ease-in-out 0.3s forwards;
+                }
+                @keyframes show {
+                    0% {
+                        filter: blur(5px);
+                        opacity: 0;
+                        transform: translateY(calc(-50% + 75px));
+                    }
+                    100% {
+                        filter: blur(0);
+                        opacity: 1;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                figure {
+                    width: 100%;
+                    height: 100%;
+                    & > img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    figcaption {
+                        width: min(30vw, 400px);
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 48px;
+                        font: 400 0.85rem Nunito;
+                        color: ghostwhite;
+                        opacity: 0;
+                        h2 {
+                            text-transform: uppercase;
+                            font-size: 50px;
+                        }
+                        p {
+                            line-height: 1.7;
+                            margin: 16px 0 20px;
+                            font-size: 16px;
+                        }
+                        a {
+                            width: fit-content;
+                            display: inline-block;
+                            background-color: rgba(0, 0, 0, 0.1);
+                            color: #fff;
+                            border: 2px solid white;
+                            border-radius: 4px;
+                            padding: 10px 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 50px;
+            z-index: 2;
+            user-select: none;
+            .btn {
+                width: 40px;
+                height: 40px;
+                color: rgba(255, 255, 255, 0.4);
+                &:hover {
+                    color: rgba(255, 255, 255, 0.8);
+                }
+                &:active {
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}

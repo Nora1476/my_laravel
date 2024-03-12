@@ -4,13 +4,14 @@
 // Variables
 @import "variables";
 
-//reset
-@import "reset";
-
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
 
+//reset
+@import "reset";
+
 //view
+@import "./component/home.scss";
 
 //app
 body {

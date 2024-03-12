@@ -22,7 +22,8 @@
     <div id="app">
         <nav class="navbar">
             {{-- <a href="/">{{ setting('site.title') }}</a> --}}
-            <a href="/"> <img src="{{ Voyager::image(setting('site.logo')) }}" alt="logo" style="width: 80px; height:80px;"></a>
+            <a href="/"> <img src="{{ Voyager::image(setting('site.logo')) }}" alt="logo"
+                    style="width: 80px; height:80px;"></a>
             <div class="pc_ver">
                 {!! menu('main', 'layouts/mymenu') !!}
             </div>
@@ -33,9 +34,13 @@
         </nav>
 
         <main>
+
+            {{-- content 삽입 --}}
             @yield('content')
+
         </main>
     </div>
+
 </body>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWTL6KP9SY"></script>
