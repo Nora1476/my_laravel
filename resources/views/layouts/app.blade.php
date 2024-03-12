@@ -26,7 +26,7 @@
                 <a href="/"> <img src="{{ Voyager::image(setting('site.logo')) }}" alt="logo"
                         style="width: 80px; height:80px;"></a>
 
-                {!! menu('main') !!}
+                {!! menu('main', 'layouts/mymenu') !!}
                 <ul>
                     @guest
                         @if (Route::has('login'))
