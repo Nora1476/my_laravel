@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        Certification
-    </div>
+
+<!-- vue 컴포넌트 삽입 -->
+<certification-component></certification-component>
+
 @endsection

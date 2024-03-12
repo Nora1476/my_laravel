@@ -15,8 +15,16 @@ import { createApp } from "vue";
 
 const app = createApp({});
 
-import ExampleComponent from "./components/ExampleComponent.vue";
-app.component("example-component", ExampleComponent);
+import About from "./components/About.vue";
+import Certification from "./components/Certification.vue";
+import Portfolio from "./components/Portfolio.vue";
+import Comment from "./components/Comment.vue";
+import Here from "./components/Here.vue";
+app.component("about-component", About);
+app.component("certification-component", Certification);
+app.component("portfolio-component", Portfolio);
+app.component("comment-component", Comment);
+app.component("here-component", Here);
 
 /**
  * The following block of code may be used to automatically register your

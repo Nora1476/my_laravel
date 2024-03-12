@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        About
-    </div>
+
+<!-- vue 컴포넌트 삽입 -->
+<about-component></about-component>
+
 @endsection
