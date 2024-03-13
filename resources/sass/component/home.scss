@@ -1,5 +1,20 @@
 .home {
     section {
+        text-align: center;
+        h2 {
+            position: relative;
+            display: inline-block;
+            font: 600 30px/1.6 Pretendard;
+            text-transform: uppercase;
+            &::after {
+                content: "";
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #32c5d2;
+                margin: 30px auto;
+            }
+        }
     }
     .sec1 {
         width: 100vw;
@@ -88,7 +103,7 @@
                         top: 50%;
                         transform: translateY(-50%);
                         left: 48px;
-                        font: 400 0.85rem Nunito;
+                        font: 400 0.85rem Pretendard;
                         color: ghostwhite;
                         opacity: 0;
                         h2 {
@@ -133,6 +148,9 @@
                 }
             }
         }
+    }
+
+    .sec2 {
     }
 }
 

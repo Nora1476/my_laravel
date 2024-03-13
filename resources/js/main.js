@@ -2,9 +2,8 @@
 window.addEventListener("load", function () {
     const gnbMenu = document.querySelector(".mo_menu");
     const closeBtn = document.querySelector(".close");
-    console.log(closeBtn);
+
     gnbMenu.addEventListener("click", function () {
-        console.log("열기");
         document.querySelector(".mo_main").classList.toggle("on");
         document.body.classList.toggle("fixed");
     });

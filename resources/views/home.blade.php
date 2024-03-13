@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="home">
+
         <section class="sec1">
             <ul class="slide">
                 <li class="slide_item">
@@ -90,6 +91,27 @@
                 <ion-icon class="btn prev" name="arrow-dropleft-circle"></ion-icon>
                 <ion-icon class="btn next" name="arrow-dropright-circle"></ion-icon>
             </nav>
+        </section>
+
+        <section class="sec2">
+            <!-- vue 컴포넌트 삽입 -->
+            <about-component></about-component>
+        </section>
+
+        <section class="sec3">
+            <certification-component></certification-component>
+        </section>
+
+        <section class="sec4">
+            <portfolio-component></portfolio-component>
+        </section>
+
+        <section class="sec5">
+            <comment-component></comment-component>
+        </section>
+
+        <section class="sec6">
+            <here-component></here-component>
         </section>
     </div>
 @endsection

@@ -55,6 +55,32 @@
             @yield('content')
 
         </main>
+
+        <footer>
+            <div class="inner">
+                <div class="main_area">
+                    <h4>Nora</h4>
+                    <ul class="com_info">
+                        <li>이름 : 조봉희</li>
+                        <li>e-mail : nada70979@gmail.com</li>
+                        <li>연락처 : 010-7166-1476</li>
+                        <li>주소 : 부산광역시 부산진구 범일로 176</li>
+                        <li class="hr">
+                            <hr>
+                        </li>
+                        <li class="copyright">COPYRIGHT&copy;2024</li>
+                    </ul>
+                </div>
+                <div class="social_area">
+                    <div class="s1">
+                        <a href=""><img src="images/icon/i_youtube.png" alt="youtube"></a>
+                    </div>
+                    <div class="s2">
+                        <a href=""><img src="images/icon/i_instagram.png" alt="i_instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
 </body>
