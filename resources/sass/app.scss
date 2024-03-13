@@ -42,9 +42,10 @@ body {
                     justify-content: flex-end;
                     align-items: center;
                     .nav-item {
-                        & > a {
+                        .nav-link {
                             padding: 10px 20px !important;
                             font: 600 20px/1.4 Nunito;
+                            color: #000;
                         }
                     }
                     .nav-item.top {
@@ -62,7 +63,7 @@ body {
 //1400px 이하
 @include desktop {
     body {
-        min-width: 1200px;
+        min-width: 100%;
         .nav {
             .nav_bar {
                 max-width: 1000px;
@@ -84,7 +85,6 @@ body {
 //1024px 이하
 @include laptop {
     body {
-        min-width: 768px;
         .nav {
             .nav_bar {
                 max-width: 100%;
@@ -102,7 +102,7 @@ body {
                         font-size: 30px;
                         cursor: pointer;
                     }
-                    .gnb {
+                    .mo_main {
                         width: 100vw;
                         max-width: 320px;
                         height: 100vh;
@@ -121,24 +121,32 @@ body {
                             box-shadow: 8px 8px 8px rgb(0 0 0 / 15%),
                                 0 0 0 9999px rgb(0 0 0 / 70%);
                         }
-                        .nav-item {
+                        .close {
                             width: 100%;
-                            max-height: 50px;
-                            font-size: 18px;
-                            padding: 10px 0;
-                            cursor: pointer;
-                            border-bottom: 1px solid #d1d1d1;
-                            & > a {
-                                color: #000;
-                            }
-                        }
-                        .nav-item.top {
-                            display: block;
-                            color: #000;
                             display: flex;
                             justify-content: flex-end;
-                            border-bottom: 0;
                             cursor: pointer;
+                        }
+                        .gnb {
+                            .nav-item {
+                                width: 100%;
+                                max-height: 50px;
+                                font-size: 18px;
+                                padding: 10px 0;
+                                cursor: pointer;
+                                border-bottom: 1px solid #d1d1d1;
+                                & > a {
+                                    color: #000;
+                                }
+                            }
+                            .nav-item.top {
+                                display: block;
+                                color: #000;
+                                display: flex;
+                                justify-content: flex-end;
+                                border-bottom: 0;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
