@@ -1,0 +1,35 @@
+// Variables
+@import "variables";
+
+@mixin mobile {
+    //540이하
+    @media all and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    //768이하
+    @media all and (max-width:  #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    //1024이하
+    @media all and (max-width:  #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    //1400px 이하
+    @media all and (max-width:  #{$desktop}) {
+        @content;
+    }
+}
+
+// $desktop: 1400px;
+// $laptop: 1024px;
+// $tablet: 768px;
+// $mobile: 540px;

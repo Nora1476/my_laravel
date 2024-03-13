@@ -1,5 +1,11 @@
 <ul class="gnb">
 
+  <li class="nav-item top">
+    <span class="material-symbols-outlined" id="close">
+      close
+    </span>
+  </li>
+
   @php
 
   if (Voyager::translatable($items)) {
@@ -40,6 +46,8 @@
 
   @endphp
 
+
+
   <li class="{{ $isActive }} nav-item">
     <a href="{{ url($item->link()) }}" target="{{ $item->target }}" style="{{ $styles }}">
       {!! $icon !!}
@@ -69,8 +77,7 @@
   @endif
   @else
   <li class="nav-item dropdown">
-    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false" v-pre>
+    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
       {{ Auth::user()->name }}
     </a>
 

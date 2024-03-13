@@ -3,6 +3,7 @@
 
 // Variables
 @import "variables";
+@import "mixin";
 
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
@@ -14,28 +15,142 @@
 @import "./component/home.scss";
 
 //app
+body.fixed {
+    overflow: hidden;
+}
 body {
-    .navbar {
-        height: 100px;
-        padding: 10px 20px;
-
-        .pc_ver {
+    min-width: 1400px;
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .nav_bar {
+            width: 100%;
+            max-width: 1400px;
+            height: 100px;
             display: flex;
-
-            .gnb {
-                flex: 1;
+            justify-content: space-between;
+            padding: 10px 20px;
+            .pc_ver {
+                width: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                .nav-item {
-                    & > a {
-                        padding: 10px 20px !important;
+                justify-content: space-between;
+                .gnb {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .nav-item {
+                        & > a {
+                            padding: 10px 20px !important;
+                            font: 600 20px/1.4 Nunito;
+                        }
+                    }
+                    .nav-item.top {
+                        display: none;
+                    }
+                }
+            }
+            .mo_ver {
+                display: none;
+            }
+        }
+    }
+}
+
+//1400px 이하
+@include desktop {
+    body {
+        min-width: 1200px;
+        .nav {
+            .nav_bar {
+                max-width: 1000px;
+                .pc_ver {
+                    .gnb {
+                        .nav-item {
+                            & > a {
+                                padding: 10px 18px !important;
+                                font: 600 20px/1.4 Nunito;
+                            }
+                        }
                     }
                 }
             }
         }
-        .mo_ver {
-            display: none;
+    }
+}
+
+//1024px 이하
+@include laptop {
+    body {
+        min-width: 768px;
+        .nav {
+            .nav_bar {
+                max-width: 100%;
+                // padding: 10px 20px;
+                .pc_ver {
+                    display: none;
+                }
+                .mo_ver {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    color: #000;
+                    .mo_menu {
+                        font-size: 30px;
+                        cursor: pointer;
+                    }
+                    .gnb {
+                        width: 100vw;
+                        max-width: 320px;
+                        height: 100vh;
+                        position: fixed;
+                        top: 0;
+                        right: -320px;
+                        padding: 40px;
+                        background: #fff;
+                        overflow: hidden;
+                        transition: all 1s;
+                        justify-content: flex-start;
+                        gap: 20px;
+                        z-index: 10;
+                        &.on {
+                            right: 0;
+                            box-shadow: 8px 8px 8px rgb(0 0 0 / 15%),
+                                0 0 0 9999px rgb(0 0 0 / 70%);
+                        }
+                        .nav-item {
+                            width: 100%;
+                            max-height: 50px;
+                            font-size: 18px;
+                            padding: 10px 0;
+                            cursor: pointer;
+                            border-bottom: 1px solid #d1d1d1;
+                            & > a {
+                                color: #000;
+                            }
+                        }
+                        .nav-item.top {
+                            display: block;
+                            color: #000;
+                            display: flex;
+                            justify-content: flex-end;
+                            border-bottom: 0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
+}
+
+//768px 이하
+@include tablet {
+}
+
+//540px 이하
+@include mobile {
 }
