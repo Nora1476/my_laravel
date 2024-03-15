@@ -2,7 +2,7 @@
     <div class="container about">
         <h2>About</h2>
 
-        <div class="about aos-init aos-animate" data-aos="fade-up">
+        <div class="about_con" data-aos="fade-up">
             <div class="a1">
                 <img src="images/bg/bg2.jpg" alt="about" />
             </div>
