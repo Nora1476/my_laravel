@@ -1,5 +1,6 @@
 .home {
-    section {
+    //section 타이틀 공통
+    section:not(:first-child) {
         text-align: center;
         h2 {
             position: relative;

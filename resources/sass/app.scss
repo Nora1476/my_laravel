@@ -14,6 +14,7 @@
 
 //view
 @import "./component/home.scss";
+@import "./component/about.scss";
 
 //app
 body.fixed {
@@ -22,7 +23,6 @@ body.fixed {
 body {
     min-width: 1400px;
     font-family: $font !important;
-
     .nav {
         width: 100%;
         display: flex;

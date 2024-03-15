@@ -1,3 +1,6 @@
+//스크롤 이벤트
+AOS.init();
+
 //모바일메뉴
 window.addEventListener("load", function () {
     const gnbMenu = document.querySelector(".mo_menu");
