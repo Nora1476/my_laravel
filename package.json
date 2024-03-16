@@ -17,6 +17,8 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "aos": "^2.3.4",
+        "masonry-layout": "^4.2.2",
         "swiper": "^11.0.7"
     }
 }
