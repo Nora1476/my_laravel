@@ -7,7 +7,7 @@
                 <img src="images/bg/bg2.jpg" alt="about" />
             </div>
             <div class="a2">
-                <p class="a_con1">‘봉만이 여전히 열심히 살고 있구나.’</p>
+                <p class="a_con1">‘봉만 여전히 열심히 살고 있구나.’</p>
                 <div class="line_right"></div>
                 <p class="a_con2">
                     봉만이는 빠르진 않지만 꾸준히 하는 성격에 붙여진 저의
